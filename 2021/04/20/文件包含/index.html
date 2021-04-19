@@ -27,9 +27,6 @@
 <meta property="og:site_name" content="Viking">
 <meta property="og:description" content="文件包含的条件和要求： 远程文件包含：allow_url_fopen &#x3D; On ​                        allow_url_include &#x3D; On 包含日志文件GetShell的要求： 利用条件：需要知道服务器日志的存储路径，且日志文件可读。 既然存在文件包含漏洞就可以利用漏洞读取apache的配置文件找到日志文件的位置。（默认：包含日志文件GetShell） ngin">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/2.png">
-<meta property="og:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/1-1618038282847.png">
-<meta property="og:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/3.png">
 <meta property="og:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/1506320720285.png!small">
 <meta property="og:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/15063207534809.png!small">
 <meta property="og:image" content="file://D:\Typora\ctfshow爆破题.assets\image-20210414221004572.png?lastModify=1618859165">
@@ -41,12 +38,12 @@
 <meta property="og:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/image-20210420020954692.png">
 <meta property="og:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/image-20210420020908941.png">
 <meta property="article:published_time" content="2021-04-19T19:13:00.000Z">
-<meta property="article:modified_time" content="2021-04-19T19:13:42.039Z">
+<meta property="article:modified_time" content="2021-04-19T19:19:58.334Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="CTF">
 <meta property="article:tag" content="Web">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/2.png">
+<meta name="twitter:image" content="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/1506320720285.png!small">
 
 <link rel="canonical" href="http://example.com/2021/04/20/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/">
 
@@ -190,7 +187,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-04-20 03:13:00 / Modified: 03:13:42" itemprop="dateCreated datePublished" datetime="2021-04-20T03:13:00+08:00">2021-04-20</time>
+              <time title="Created: 2021-04-20 03:13:00 / Modified: 03:19:58" itemprop="dateCreated datePublished" datetime="2021-04-20T03:13:00+08:00">2021-04-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -220,9 +217,7 @@
 <p><strong>利用条件：</strong>需要知道服务器日志的存储路径，且日志文件可读。</p>
 <p>既然存在文件包含漏洞就可以利用漏洞读取apache的配置文件找到日志文件的位置。（默认：包含日志文件GetShell）</p>
 <p>nginx默认日志文件路径：/var/log/nginx/access.log</p>
-<h2 id="常见伪协议的利用"><a href="#常见伪协议的利用" class="headerlink" title="常见伪协议的利用"></a>常见伪协议的利用</h2><h4 id="php伪协议"><a href="#php伪协议" class="headerlink" title="php伪协议"></a>php伪协议</h4><p><img src="%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/2.png" alt="2"><img src="%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/1-1618038282847.png" alt="1"></p>
-<p><img src="%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.assets/3.png" alt="3"></p>
-<p><strong>拿到源码之后再进行base64解码</strong></p>
+<h2 id="常见伪协议的利用"><a href="#常见伪协议的利用" class="headerlink" title="常见伪协议的利用"></a>常见伪协议的利用</h2><h4 id="php伪协议"><a href="#php伪协议" class="headerlink" title="php伪协议"></a>php伪协议</h4><p><strong>拿到源码之后再进行base64解码</strong></p>
 <p>首先归纳下常见的文件包含函数：include、require、include_once、require_once、highlight_file 、show_source 、readfile 、file_get_contents 、fopen 。</p>
 <p><strong>环境概要：</strong></p>
 <p>PHP.ini：</p>
@@ -320,13 +315,6 @@
 
 
         
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/04/15/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
       </footer>
     
   </article>
@@ -398,7 +386,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
